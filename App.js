@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import LoginForm from './src/components/LoginForm';
+import Saludar from './src/components/Saludar';
 
 export default function App() {
+
+  const user = {
+    firstName: 'Marlon',
+    lastName: 'GARCIA',
+    age: 52
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Hola Marlon!</Text>
-      <StatusBar style="auto" />
-      <LoginForm />
+      {/* <StatusBar style="auto" /> */}
+      <Saludar user={user}/>
     </View>
   );
 }
