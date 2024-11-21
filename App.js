@@ -1,6 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+import { LogBox } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
-import Saludar from './src/components/Saludar';
+import NavigationStack from './src/navigation/NavigationStack';
 
 export default function App() {
 
@@ -11,10 +13,9 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      {/* <StatusBar style="auto" /> */}
-      <Saludar user={user}/>
-    </View>
+    <NavigationContainer>
+      <NavigationStack />
+    </NavigationContainer>
   );
 }
 
@@ -25,4 +26,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontSize: 32,
+  }
 });

@@ -21,3 +21,9 @@ Leer código QR con app Expo Go (instalarla) de la store
 npx expo install react-dom react-native-web @expo/metro-runtime
 ```
 
+## Instalar dependencias para barra de navegación
+```
+npm install @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context react-native-vector-icons
+yarn add react-native-screens react-native-safe-area-context
+yarn add @react-navigation/native-stack
+```
